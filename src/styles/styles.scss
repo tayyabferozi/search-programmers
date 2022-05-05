@@ -238,6 +238,10 @@
       height: 38px;
       border-radius: 50%;
       border: 1px solid #000;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -455,6 +459,10 @@
       text-align: center;
       padding: 70px 12px;
     }
+
+    @media screen and (max-width: 991px) {
+      border-radius: 70px;
+    }
   }
 
   img {
@@ -464,6 +472,7 @@
     @media screen and (max-width: 991px) {
       display: block;
       margin: 0 auto 1rem;
+      max-width: 300px;
     }
   }
 }
@@ -724,6 +733,19 @@
       .options .custom-select-container .selected-text {
         &::after {
           content: url("../assets/vectors/chevron-white.svg");
+        }
+      }
+    }
+
+    #footer {
+      .social {
+        .btn {
+          border-color: #fff;
+
+          img {
+            filter: invert(97%) sepia(97%) saturate(14%) hue-rotate(235deg)
+              brightness(104%) contrast(102%);
+          }
         }
       }
     }

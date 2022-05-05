@@ -585,3 +585,22 @@ span {
 .c-pointer {
   cursor: pointer;
 }
+
+.dark-mode {
+  .accordion-wrap {
+    .accordion-head {
+      color: #fff;
+
+      &::after {
+        content: url("../assets/vectors/chevron-white.svg");
+      }
+    }
+
+    .accordion-body {
+      &,
+      * {
+        color: #fff;
+      }
+    }
+  }
+}
