@@ -643,6 +643,10 @@
 
       .menu-sm {
         background-color: $color11;
+
+        .close {
+          color: #fff;
+        }
       }
 
       a:not(:hover),
