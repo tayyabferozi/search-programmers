@@ -288,6 +288,7 @@
 
   @media screen and (max-width: 575px) {
     min-height: 450px;
+    max-height: 530px;
     align-items: flex-start;
   }
 
@@ -639,6 +640,10 @@
   #main-layout {
     #header {
       background-color: $color11;
+
+      .menu-sm {
+        background-color: $color11;
+      }
 
       a:not(:hover),
       a.active,

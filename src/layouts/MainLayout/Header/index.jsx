@@ -75,10 +75,10 @@ const Header = () => {
         <NavLink to="/explore">{content[appLanguage].text3}</NavLink>
         <NavLink to="/login">{content[appLanguage].text4}</NavLink>
         <LightModeToggler />
+
         <Select placeholder="English" onChange={langChangeHandler}>
           <Option value="English">English</Option>
-          <Option value="Urdu">Urdu</Option>
-          <Option value="Maths">Maths</Option>
+          <Option value="Spanish">Spanish</Option>
         </Select>
 
         <Button primary>Check In</Button>
@@ -96,6 +96,7 @@ const Header = () => {
       </div>
       <div className="options">
         <LightModeToggler />
+
         <Select placeholder="English" onChange={langChangeHandler}>
           <Option value="English">English</Option>
           <Option value="Spanish">Spanish</Option>
