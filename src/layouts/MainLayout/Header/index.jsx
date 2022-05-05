@@ -72,7 +72,7 @@ const Header = () => {
         <img className="logo-img" src="/assets/vectors/logo.svg" alt="logo" />
         <NavLink to="/">{content[appLanguage].text1}</NavLink>
         <NavLink to="/beginning">{content[appLanguage].text2}</NavLink>
-        <NavLink to="/explore">{content[appLanguage].text3}</NavLink>
+        <NavLink to="/search-results">{content[appLanguage].text3}</NavLink>
         <NavLink to="/login">{content[appLanguage].text4}</NavLink>
         <LightModeToggler />
 
@@ -91,7 +91,7 @@ const Header = () => {
       <div className="nav">
         <NavLink to="/">{content[appLanguage].text1}</NavLink>
         <NavLink to="/beginning">{content[appLanguage].text2}</NavLink>
-        <NavLink to="/explore">{content[appLanguage].text3}</NavLink>
+        <NavLink to="/search-results">{content[appLanguage].text3}</NavLink>
         <NavLink to="/login">{content[appLanguage].text4}</NavLink>
       </div>
       <div className="options">
