@@ -11,6 +11,7 @@ const Select = ({
   children,
   defaultValue,
   placeholder,
+  onChange,
 }) => {
   const [selectedOption, setSelectedOption] = useState(defaultValue || "");
   const [showDropdown, setShowDropdown] = useState(false);
@@ -27,6 +28,7 @@ const Select = ({
   const updateSelectedOption = (option) => {
     setSelectedOption(option);
     setShowDropdown(false);
+    onChange(option);
   };
 
   return (

@@ -1,10 +1,44 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import Section from "../../../components/Section";
 import GridContainer from "../../../components/GridContainer";
 
+import { GlobalContext } from "../../../context/GlobalContext";
+
+const content = {
+  English: {
+    text1: "Main Link",
+    text2: "Home",
+    text3: "Services",
+    text4: "Blog",
+    text5: "Contact",
+    text6: "Quick Link",
+    text7: "Terms & Conditions",
+    text8: "Privacy Policy",
+    text9: "Contact",
+    text10: "Telephone",
+    text11: "Email Address",
+  },
+  Spanish: {
+    text1: "Enlace principal",
+    text2: "Home",
+    text3: "Servicios",
+    text4: "Blog",
+    text5: "Contacto",
+    text6: "Enlace rápido",
+    text7: "Términos y condiciones",
+    text8: "Política de privacidad",
+    text9: "Contacto",
+    text10: "Teléfono",
+    text11: "Email Address",
+  },
+};
+
 const Footer = () => {
+  const {
+    state: { appLanguage },
+  } = useContext(GlobalContext);
   return (
     <Section id="footer">
       {/* <img
@@ -51,21 +85,21 @@ const Footer = () => {
         <div className="col-lg-8">
           <div className="row gy-4 justify-content-center">
             <div className="col-xl-4 col-lg-3 col-sm-6">
-              <h5>Main Link</h5>
+              <h5>{content[appLanguage].text1}</h5>
 
               <div className="links">
-                <Link to="/">Home</Link>
-                <Link to="/">Services</Link>
-                <Link to="/">Blog</Link>
-                <Link to="/">Contact</Link>
+                <Link to="/">{content[appLanguage].text2}</Link>
+                <Link to="/">{content[appLanguage].text3}</Link>
+                <Link to="/">{content[appLanguage].text4}</Link>
+                <Link to="/">{content[appLanguage].text5}</Link>
               </div>
             </div>
             <div className="col-lg-4 col-sm-6">
-              <h5>Quick Link</h5>
+              <h5>{content[appLanguage].text6}</h5>
 
               <div className="links">
-                <Link to="/">Terms &amp; Conditions</Link>
-                <Link to="/">Privacy Policy</Link>
+                <Link to="/">{content[appLanguage].text7}</Link>
+                <Link to="/">{content[appLanguage].text8}</Link>
               </div>
             </div>
             <div className="col-xl-4 col-lg-5 col-sm-6">
@@ -82,7 +116,7 @@ const Footer = () => {
                     alt="phone"
                   />
                   <div className="text ms-2">
-                    <h6>Telephone</h6>
+                    <h6>{content[appLanguage].text10}</h6>
                     <div className="fs-16 text-light-1 mt-1">
                       +49 (0) 511 763 99 40
                     </div>
@@ -98,7 +132,7 @@ const Footer = () => {
                     alt="mail"
                   />
                   <div className="text ms-2">
-                    <h6>Email Address</h6>
+                    <h6>{content[appLanguage].text11}</h6>
                     <div className="fs-16 text-light-1">
                       www.kanzlei-duran.eu
                     </div>

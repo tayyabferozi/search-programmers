@@ -1,28 +1,61 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 
 import GridContainer from "../../../components/GridContainer";
 import Section from "../../../components/Section";
 import Button from "../../../components/Button";
 
-const cardsData = [
-  {
-    img: "/assets/vectors/process-1.svg",
-    title: "Search",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+import { GlobalContext } from "../../../context/GlobalContext";
+
+const content = {
+  English: {
+    text1: "Our",
+    text2: "Process",
+    text3: "Work with developers from anywhere in the world in 3 easy steps",
+    text4: "Search",
+    text5: "Chat",
+    text6: "Remember",
+    text7: "Need Help?",
+    text8:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    text9: "Answer Questionnaire",
   },
-  {
-    img: "/assets/vectors/process-2.svg",
-    title: "Chat",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+  Spanish: {
+    text1: "Nuestra",
+    text2: "Proceso",
+    text3:
+      "Trabaja con desarrolladores de cualquier parte del mundo en 3 sencillos pasos",
+    text4: "Búsqueda",
+    text5: "Chat",
+    text6: "Recordar",
+    text7: "¿Necesitas ayuda?",
+    text8:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    text9: "Cuestionario de respuesta",
   },
-  {
-    img: "/assets/vectors/process-3.svg",
-    title: "Remember",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-  },
-];
+};
 
 const Process = () => {
+  const {
+    state: { appLanguage },
+  } = useContext(GlobalContext);
+  const [cardsData] = useState([
+    {
+      img: "/assets/vectors/process-1.svg",
+      title: content[appLanguage].text4,
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    },
+    {
+      img: "/assets/vectors/process-2.svg",
+      title: content[appLanguage].text5,
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    },
+    {
+      img: "/assets/vectors/process-3.svg",
+      title: content[appLanguage].text6,
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    },
+  ]);
+
   return (
     <Section id="landing-process">
       <img
@@ -49,9 +82,13 @@ const Process = () => {
       <div className="text-wrap">
         <div className="section-title">
           <h1>
-            Our <span className="text-primary-1">Process</span>
+            {content[appLanguage].text1}{" "}
+            <span className="text-primary-1">
+              {" "}
+              {content[appLanguage].text2}{" "}
+            </span>
           </h1>
-          <p>Work with developers from anywhere in the world in 3 easy steps</p>
+          <p> {content[appLanguage].text3} </p>
         </div>
 
         <div className="cards">
@@ -91,15 +128,12 @@ const Process = () => {
               </div>
               <div className="col-lg-9">
                 <div className="py-lg-5">
-                  <h1>Need Help?</h1>
+                  <h1>{content[appLanguage].text7}</h1>
 
-                  <p className="mt-2">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
-                  </p>
+                  <p className="mt-2">{content[appLanguage].text8}</p>
 
                   <Button primaryInverted className="mt-30">
-                    Answer Questionnaire
+                    {content[appLanguage].text9}
                   </Button>
                 </div>
               </div>

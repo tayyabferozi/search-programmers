@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
 
-import GridContainer from "../../components/GridContainer";
-import Section from "../../components/Section";
-import Button from "../../components/Button";
+import GridContainer from "../../../components/GridContainer";
+import Section from "../../../components/Section";
+import Button from "../../../components/Button";
+
+import { GlobalContext } from "../../../context/GlobalContext";
+
+const content = {
+  English: {
+    text1: "Statistics",
+    text2:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    text3: "Work As A Programmer",
+    text4: "Work With Programmer",
+  },
+  Spanish: {
+    text1: "Estadísticas",
+    text2:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    text3: "Trabajar como programador",
+    text4: "Trabajar con programador",
+  },
+};
 
 const cardsData = [
   {
@@ -28,10 +47,13 @@ const cardsData = [
 ];
 
 const Statistics = () => {
+  const {
+    state: { appLanguage },
+  } = useContext(GlobalContext);
   return (
     <Section id="landing-stats">
       <div className="section-title">
-        <h1>Statistics</h1>
+        <h1>{content[appLanguage].text1}</h1>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
@@ -64,8 +86,8 @@ const Statistics = () => {
       </GridContainer>
 
       <div className="mt-50 btns">
-        <Button transparent>Work As A Programmer</Button>
-        <Button primary>Work With Programmer</Button>
+        <Button transparent>{content[appLanguage].text3}</Button>
+        <Button primary>{content[appLanguage].text4}</Button>
       </div>
     </Section>
   );

@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 
 import Section from "../../../components/Section";
+
+import { GlobalContext } from "../../../context/GlobalContext";
+
+const content = {
+  English: {
+    text1: "Important",
+    text2: "Categories",
+    text3:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
+  Spanish: {
+    text1: "Importante",
+    text2: "Categorías",
+    text3:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
+};
 
 const cardsData = [
   {
@@ -14,7 +31,7 @@ const cardsData = [
   {
     bg: "/assets/imgs/category-2.png",
     icon: "/assets/imgs/category-icon-2.png",
-    title: "JavaScript",
+    title: "Shopify",
     desc: "Lorem Ipsum is simply dummy text of the printing.",
   },
   {
@@ -26,22 +43,23 @@ const cardsData = [
   {
     bg: "/assets/imgs/category-4.png",
     icon: "/assets/imgs/category-icon-4.png",
-    title: "JavaScript",
+    title: "PHP",
     desc: "Lorem Ipsum is simply dummy text of the printing.",
   },
 ];
 
 const Categories = () => {
+  const {
+    state: { appLanguage },
+  } = useContext(GlobalContext);
   return (
     <Section id="landing-categories">
       <div className="section-title">
         <h1>
-          Important <span className="text-primary-1">Categories</span>
+          {content[appLanguage].text1}{" "}
+          <span className="text-primary-1">{content[appLanguage].text2}</span>
         </h1>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </p>
+        <p>{content[appLanguage].text2}</p>
       </div>
 
       <div className="cards mt-40">
@@ -51,7 +69,6 @@ const Categories = () => {
           className="mySwiper"
           breakpoints={{
             0: {
-              // spaceBetween: 30,
               slidesPerView: 1,
             },
             671: {
