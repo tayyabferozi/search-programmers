@@ -59,7 +59,7 @@ const Categories = () => {
           {content[appLanguage].text1}{" "}
           <span className="text-primary-1">{content[appLanguage].text2}</span>
         </h1>
-        <p>{content[appLanguage].text2}</p>
+        <p>{content[appLanguage].text3}</p>
       </div>
 
       <div className="cards mt-40">
