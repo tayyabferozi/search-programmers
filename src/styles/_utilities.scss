@@ -405,3 +405,58 @@ input:checked + .slider:before {
     opacity: 0;
   }
 }
+
+.search-container {
+  position: absolute !important;
+  width: calc(100% - 12px);
+  max-width: 700px;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  height: 80px;
+  border-radius: 14px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  box-shadow: 2px 4px 23px 0px #0000001a;
+
+  * {
+    font-size: 20px;
+
+    @media screen and (max-width: 575px) {
+      font-size: 14px;
+    }
+  }
+
+  input {
+    flex-grow: 1;
+    border: none;
+    color: $color2 !important;
+    padding: 0 12px;
+    min-width: 20px;
+
+    &::placeholder {
+      color: $color9;
+    }
+  }
+
+  .selected-text {
+    color: $color1 !important;
+    border-left: 1px solid $color9;
+
+    &::after {
+      content: url("../assets/vectors/chevron-blue.svg");
+    }
+  }
+
+  .select-option {
+    font-size: 14px;
+
+    @media screen and (max-width: 575px) {
+      font-size: 12px;
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+  }
+}
