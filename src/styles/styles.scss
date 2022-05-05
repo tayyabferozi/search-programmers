@@ -634,24 +634,41 @@
     overflow: hidden;
     box-shadow: 2px 4px 23px 0px #0000001a;
 
-    .item {
+    .item,
+    .accordion-head {
       position: relative;
       padding: 0 20px;
       height: 58px;
-      font-size: 22px;
       font-weight: 600;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      cursor: pointer;
+
+      * {
+        font-size: 22px;
+      }
+
+      @extend %transitioned;
+
+      &:hover {
+        &::before {
+          opacity: 0.2;
+        }
+      }
 
       &.with-chevron {
-        &::after {
+        &::before {
+          content: "";
           position: absolute;
-          right: 16px;
-          top: 50%;
-          transform: translateY(-50%);
-          content: url("../assets/vectors/chevron.svg");
-          transform: rotate(-90deg);
+          left: 0;
+          right: 20%;
+          top: 0;
+          height: 100%;
+          background: linear-gradient(to right, #246de7, #246de700);
+          opacity: 0;
+
+          @extend %transitioned;
         }
       }
     }

@@ -1,4 +1,6 @@
 import React from "react";
+
+import Accordion from "../../../components/Accordion/";
 import GridContainer from "../../../components/GridContainer";
 import Section from "../../../components/Section";
 
@@ -106,21 +108,12 @@ const Results = () => {
         <GridContainer>
           <div className="col-xl-4 col-lg-5 col-md-6">
             <div className="filter-items">
-              <div className="item with-chevron">
-                <div className="text">Category</div>
-              </div>
-              <div className="item with-chevron">
-                <div className="text">Service Options</div>
-              </div>
-              <div className="item with-chevron">
-                <div className="text">Seller Details</div>
-              </div>
-              <div className="item with-chevron">
-                <div className="text">Budget</div>
-              </div>
-              <div className="item with-chevron">
-                <div className="text">Delivery Time</div>
-              </div>
+              <Accordion title="Category">Lorem</Accordion>
+              <Accordion title="Service Options">Lorem</Accordion>
+              <Accordion title="Seller Details">Lorem</Accordion>
+              <Accordion title="Budget">Lorem</Accordion>
+              <Accordion title="Delivery Time">Lorem</Accordion>
+
               <div className="item">
                 <div className="text">Pro services</div>
                 <label class="switch-2">

@@ -529,3 +529,32 @@ input:checked + .slider:before {
 span {
   font-size: inherit;
 }
+
+.accordion-wrap {
+  .accordion-head {
+    position: relative;
+    padding: 0 20px;
+    font-size: 22px;
+
+    &::after {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      content: url("../assets/vectors/chevron.svg");
+
+      @extend %transitioned;
+    }
+
+    &.active {
+      &::after {
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .accordion-body {
+    padding: 0 20px;
+    overflow: hidden;
+  }
+}
