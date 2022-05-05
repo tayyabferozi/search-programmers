@@ -2,6 +2,7 @@ import React from "react";
 
 import GridContainer from "../../../components/GridContainer";
 import Section from "../../../components/Section";
+import Button from "../../../components/Button";
 
 const cardsData = [
   {
@@ -24,40 +25,87 @@ const cardsData = [
 const Process = () => {
   return (
     <Section id="landing-process">
-      <div className="section-title">
-        <h1>
-          Our <span className="text-primary-1">Process</span>
-        </h1>
-        <p>Work with developers from anywhere in the world in 3 easy steps</p>
-      </div>
+      <img
+        className="bg-left"
+        src="/assets/vectors/bg-process-left.svg"
+        alt="bg"
+      />
+      <img
+        className="bg-right"
+        src="/assets/vectors/bg-process-right.svg"
+        alt="bg"
+      />
+      <img
+        className="bg-left-dark"
+        src="/assets/vectors/bg-process-left-dark.svg"
+        alt="bg"
+      />
+      <img
+        className="bg-right-dark"
+        src="/assets/vectors/bg-process-right-dark.svg"
+        alt="bg"
+      />
 
-      <div className="cards">
-        <GridContainer rowClassName="justify-content-center main-row">
-          <img
-            className="arrow-1"
-            src="/assets/vectors/process-arrow-1.svg"
-            alt="arrow"
-          />
-          <img
-            className="arrow-2"
-            src="/assets/vectors/process-arrow-2.svg"
-            alt="arrow"
-          />
-          {cardsData.map((el, idx) => {
-            const { img, title, desc } = el;
+      <div className="text-wrap">
+        <div className="section-title">
+          <h1>
+            Our <span className="text-primary-1">Process</span>
+          </h1>
+          <p>Work with developers from anywhere in the world in 3 easy steps</p>
+        </div>
 
-            return (
-              <div key={"process" + idx} className="col-xl-4 col-lg-6">
-                <div className="card">
-                  <img src={img} alt={title} />
+        <div className="cards">
+          <GridContainer rowClassName="justify-content-center main-row">
+            <img
+              className="arrow-1"
+              src="/assets/vectors/process-arrow-1.svg"
+              alt="arrow"
+            />
+            <img
+              className="arrow-2"
+              src="/assets/vectors/process-arrow-2.svg"
+              alt="arrow"
+            />
+            {cardsData.map((el, idx) => {
+              const { img, title, desc } = el;
 
-                  <h5>{title}</h5>
-                  <p className="text-light-1 mt-15">{desc}</p>
+              return (
+                <div key={"process" + idx} className="col-xl-4 col-lg-6">
+                  <div className="card">
+                    <img src={img} alt={title} />
+
+                    <h5>{title}</h5>
+                    <p className="text-light-1 mt-15">{desc}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </GridContainer>
+        </div>
+
+        <div className="help">
+          <div className="main">
+            <GridContainer rowClassName="main-row align-items-center">
+              <div className="col-lg-3">
+                <img src="/assets/imgs/help-left.png" alt="help" />{" "}
+              </div>
+              <div className="col-lg-9">
+                <div className="py-lg-5">
+                  <h1>Need Help?</h1>
+
+                  <p className="mt-2">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </p>
+
+                  <Button primaryInverted className="mt-30">
+                    Answer Questionnaire
+                  </Button>
                 </div>
               </div>
-            );
-          })}
-        </GridContainer>
+            </GridContainer>
+          </div>
+        </div>
       </div>
     </Section>
   );

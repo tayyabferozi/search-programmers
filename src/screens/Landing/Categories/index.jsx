@@ -46,11 +46,31 @@ const Categories = () => {
 
       <div className="cards mt-40">
         <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
           navigation={true}
           modules={[Navigation]}
           className="mySwiper"
+          breakpoints={{
+            0: {
+              // spaceBetween: 30,
+              slidesPerView: 1,
+            },
+            671: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            992: {
+              slidesPerView: 3,
+              spaceBetween: 15,
+            },
+            1200: {
+              slidesPerView: 4,
+              spaceBetween: 15,
+            },
+            1250: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+          }}
         >
           {cardsData.map((el, idx) => {
             const { icon, bg, title, desc } = el;

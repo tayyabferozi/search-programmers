@@ -38,12 +38,18 @@ const Statistics = () => {
         </p>
       </div>
 
-      <GridContainer rowClassName="main-row" rootClassName="mt-50">
+      <GridContainer
+        rowClassName="main-row justify-content-center"
+        rootClassName="mt-50"
+      >
         {cardsData.map((el, idx) => {
           const { icon, number, title } = el;
 
           return (
-            <div className="col-lg-3" key={"stats-card" + idx}>
+            <div
+              className="col-xl-3 col-lg-4 col-sm-6"
+              key={"stats-card" + idx}
+            >
               <div className="card">
                 <img src={icon} alt={title} />
 

@@ -7,9 +7,29 @@ import GridContainer from "../../../components/GridContainer";
 const Footer = () => {
   return (
     <Section id="footer">
+      {/* <img
+        className="bg-footer-left"
+        src="/assets/vectors/bg-footer-left.svg"
+        alt="bg-left"
+      />
+      <img
+        className="bg-footer-right"
+        src="/assets/vectors/bg-footer-right.svg"
+        alt="bg-right"
+      />
+      <img
+        className="bg-footer-left-dark"
+        src="/assets/vectors/bg-footer-left-dark.svg"
+        alt="bg-left"
+      />
+      <img
+        className="bg-footer-right-dark"
+        src="/assets/vectors/bg-footer-right-dark.svg"
+        alt="bg-right"
+      /> */}
       <GridContainer rowClassName="main-row">
-        <div className="col-lg-4">
-          <img src="/assets/vectors/logo.svg" alt="logo" />
+        <div className="col-lg-4 left">
+          <img className="logo-img" src="/assets/vectors/logo.svg" alt="logo" />
 
           <p className="fs-16 mt-4 text-light-1">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -29,8 +49,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="col-lg-8">
-          <div className="row">
-            <div className="col-lg-4">
+          <div className="row gy-4 justify-content-center">
+            <div className="col-xl-4 col-lg-3 col-sm-6">
               <h5>Main Link</h5>
 
               <div className="links">
@@ -40,7 +60,7 @@ const Footer = () => {
                 <Link to="/">Contact</Link>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 col-sm-6">
               <h5>Quick Link</h5>
 
               <div className="links">
@@ -48,7 +68,7 @@ const Footer = () => {
                 <Link to="/">Privacy Policy</Link>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-xl-4 col-lg-5 col-sm-6">
               <h5>Contact</h5>
 
               <div className="links">
@@ -56,10 +76,14 @@ const Footer = () => {
                   href="tel:+49(0)5117639940"
                   className="d-flex align-items-start"
                 >
-                  <img src="/assets/vectors/contact-phone.svg" alt="phone" />
+                  <img
+                    className="contact-icon"
+                    src="/assets/vectors/contact-phone.svg"
+                    alt="phone"
+                  />
                   <div className="text ms-2">
                     <h6>Telephone</h6>
-                    <div className="fs-16 text-light-1">
+                    <div className="fs-16 text-light-1 mt-1">
                       +49 (0) 511 763 99 40
                     </div>
                   </div>
@@ -68,7 +92,11 @@ const Footer = () => {
                   href="mailto:www.kanzlei-duran.eu"
                   className="d-flex align-items-start mt-4"
                 >
-                  <img src="/assets/vectors/contact-mail.svg" alt="mail" />
+                  <img
+                    className="contact-icon"
+                    src="/assets/vectors/contact-mail.svg"
+                    alt="mail"
+                  />
                   <div className="text ms-2">
                     <h6>Email Address</h6>
                     <div className="fs-16 text-light-1">
@@ -81,6 +109,8 @@ const Footer = () => {
           </div>
         </div>
       </GridContainer>
+
+      <div className="copyright">©2022 by Lorem Ipsum. All Rights Reserved</div>
     </Section>
   );
 };
