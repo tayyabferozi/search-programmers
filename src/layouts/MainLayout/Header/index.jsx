@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import clsx from "clsx";
 
 import Select from "../../../components/Select/Select";
@@ -64,12 +64,16 @@ const Header = () => {
   });
   return (
     <Section id="header" className={clsx(scrolled && "scrolled")}>
-      <img className="logo-img" src="/assets/vectors/logo.svg" alt="logo" />
+      <Link to="/">
+        <img className="logo-img" src="/assets/vectors/logo.svg" alt="logo" />
+      </Link>
       <div className={clsx(isMenuActive && "active", "menu-sm")}>
         <div className="close" onClick={toggleMenuActive}>
           &times;
         </div>
-        <img className="logo-img" src="/assets/vectors/logo.svg" alt="logo" />
+        <Link to="/">
+          <img className="logo-img" src="/assets/vectors/logo.svg" alt="logo" />
+        </Link>
         <NavLink to="/">{content[appLanguage].text1}</NavLink>
         <NavLink to="/beginning">{content[appLanguage].text2}</NavLink>
         <NavLink to="/search-results">{content[appLanguage].text3}</NavLink>

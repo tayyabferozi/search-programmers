@@ -15,8 +15,8 @@ const cardsData = [
     startingAt: 187,
   },
   {
-    img: "/assets/imgs/result-img-1.png",
-    userImg: "/assets/imgs/result-user-img-1.png",
+    img: "/assets/imgs/result-img-2.png",
+    userImg: "/assets/imgs/result-user-img-2.png",
     name: "Edoardoizzo",
     desc: "I will create one product shopify store, dropshipping website",
     stars: "5.0",
@@ -24,8 +24,8 @@ const cardsData = [
     startingAt: 187,
   },
   {
-    img: "/assets/imgs/result-img-1.png",
-    userImg: "/assets/imgs/result-user-img-1.png",
+    img: "/assets/imgs/result-img-3.png",
+    userImg: "/assets/imgs/result-user-img-3.png",
     name: "Edoardoizzo",
     desc: "I will create one product shopify store, dropshipping website",
     stars: "5.0",
@@ -33,8 +33,8 @@ const cardsData = [
     startingAt: 187,
   },
   {
-    img: "/assets/imgs/result-img-1.png",
-    userImg: "/assets/imgs/result-user-img-1.png",
+    img: "/assets/imgs/result-img-4.png",
+    userImg: "/assets/imgs/result-user-img-4.png",
     name: "Edoardoizzo",
     desc: "I will create one product shopify store, dropshipping website",
     stars: "5.0",
@@ -42,8 +42,8 @@ const cardsData = [
     startingAt: 187,
   },
   {
-    img: "/assets/imgs/result-img-1.png",
-    userImg: "/assets/imgs/result-user-img-1.png",
+    img: "/assets/imgs/result-img-5.png",
+    userImg: "/assets/imgs/result-user-img-5.png",
     name: "Edoardoizzo",
     desc: "I will create one product shopify store, dropshipping website",
     stars: "5.0",
@@ -51,8 +51,8 @@ const cardsData = [
     startingAt: 187,
   },
   {
-    img: "/assets/imgs/result-img-1.png",
-    userImg: "/assets/imgs/result-user-img-1.png",
+    img: "/assets/imgs/result-img-6.png",
+    userImg: "/assets/imgs/result-user-img-6.png",
     name: "Edoardoizzo",
     desc: "I will create one product shopify store, dropshipping website",
     stars: "5.0",
@@ -60,8 +60,8 @@ const cardsData = [
     startingAt: 187,
   },
   {
-    img: "/assets/imgs/result-img-1.png",
-    userImg: "/assets/imgs/result-user-img-1.png",
+    img: "/assets/imgs/result-img-7.png",
+    userImg: "/assets/imgs/result-user-img-7.png",
     name: "Edoardoizzo",
     desc: "I will create one product shopify store, dropshipping website",
     stars: "5.0",
@@ -69,8 +69,8 @@ const cardsData = [
     startingAt: 187,
   },
   {
-    img: "/assets/imgs/result-img-1.png",
-    userImg: "/assets/imgs/result-user-img-1.png",
+    img: "/assets/imgs/result-img-8.png",
+    userImg: "/assets/imgs/result-user-img-8.png",
     name: "Edoardoizzo",
     desc: "I will create one product shopify store, dropshipping website",
     stars: "5.0",
@@ -176,7 +176,11 @@ const Results = () => {
                       </div>
 
                       <div className="card-foot">
-                        <img src="/assets/vectors/heart-fill.svg" alt="heart" />
+                        <img
+                          className="c-pointer"
+                          src="/assets/vectors/heart-fill.svg"
+                          alt="heart"
+                        />
                         <div className="right-text">
                           <div>STARTING AT</div>
                           <div className="text-primary-1 fw-600 fs-16 mt-1 text-end">

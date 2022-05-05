@@ -137,6 +137,10 @@ a {
     .btn-text {
       color: #fff !important;
     }
+
+    &:hover {
+      background-color: $color14;
+    }
   }
 
   &.btn-transparent {
@@ -147,15 +151,34 @@ a {
     .btn-text {
       color: #fff !important;
     }
+
+    &:hover {
+      background-color: #fff;
+      border-color: $color1;
+
+      .btn-text {
+        color: $color1 !important;
+      }
+    }
   }
 
   &.btn-primary-inverted {
     padding-left: 48px;
     padding-right: 48px;
     background-color: #fff;
+    border: 1px solid transparent;
 
     .btn-text {
       color: $color1 !important;
+    }
+
+    &:hover {
+      background-color: transparent;
+      border-color: #fff;
+
+      .btn-text {
+        color: #fff !important;
+      }
     }
   }
 
@@ -557,4 +580,8 @@ span {
     padding: 0 20px;
     overflow: hidden;
   }
+}
+
+.c-pointer {
+  cursor: pointer;
 }
