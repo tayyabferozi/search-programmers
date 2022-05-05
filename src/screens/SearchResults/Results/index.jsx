@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Accordion from "../../../components/Accordion/";
 import GridContainer from "../../../components/GridContainer";
 import Section from "../../../components/Section";
+import { GlobalContext } from "../../../context/GlobalContext";
 
 const cardsData = [
   {
@@ -79,7 +80,38 @@ const cardsData = [
   },
 ];
 
+const content = {
+  English: {
+    text1: "Results for",
+    text2: "Services available",
+    text3: "Category",
+    text4: "Service Options",
+    text5: "Seller Details",
+    text6: "Budget",
+    text7: "Delivery Time",
+    text8: "Pro services",
+    text9: "Local sellers",
+    text10: "Online sellers",
+  },
+  Spanish: {
+    text1: "Resultados para",
+    text2: "servicios disponibles",
+    text3: "Categoría",
+    text4: "Opciones de servicio",
+    text5: "Detalles del vendedor",
+    text6: "Presupuesto",
+    text7: "El tiempo de entrega",
+    text8: "Servicios profesionales",
+    text9: "Vendedores locales",
+    text10: "Vendedores en línea",
+  },
+};
+
 const Results = () => {
+  const {
+    state: { appLanguage },
+  } = useContext(GlobalContext);
+
   return (
     <Section id="search-results">
       <img
@@ -99,37 +131,38 @@ const Results = () => {
       />
       <div className="section-title text-start">
         <h1>
-          Results for <span className="text-primary-1">"Shopify"</span>
+          {content[appLanguage].text1}{" "}
+          <span className="text-primary-1">"Shopify"</span>
         </h1>
-        <h4>26,221 services available</h4>
+        <h4>26,221 {content[appLanguage].text2}</h4>
       </div>
 
       <div className="results-main mt-50 pt-20">
         <GridContainer>
           <div className="col-xl-4 col-lg-5 col-md-6">
             <div className="filter-items">
-              <Accordion title="Category">Lorem</Accordion>
-              <Accordion title="Service Options">Lorem</Accordion>
-              <Accordion title="Seller Details">Lorem</Accordion>
-              <Accordion title="Budget">Lorem</Accordion>
-              <Accordion title="Delivery Time">Lorem</Accordion>
+              <Accordion title={content[appLanguage].text3}>Lorem</Accordion>
+              <Accordion title={content[appLanguage].text4}>Lorem</Accordion>
+              <Accordion title={content[appLanguage].text5}>Lorem</Accordion>
+              <Accordion title={content[appLanguage].text6}>Lorem</Accordion>
+              <Accordion title={content[appLanguage].text7}>Lorem</Accordion>
 
               <div className="item">
-                <div className="text">Pro services</div>
+                <div className="text">{content[appLanguage].text8}</div>
                 <label class="switch-2">
                   <input type="checkbox" />
                   <span class="slider round"></span>
                 </label>
               </div>
               <div className="item">
-                <div className="text">Local sellers</div>
+                <div className="text">{content[appLanguage].text9}</div>
                 <label class="switch-2">
                   <input type="checkbox" />
                   <span class="slider round"></span>
                 </label>
               </div>
               <div className="item">
-                <div className="text">Online sellers</div>
+                <div className="text">{content[appLanguage].text10}</div>
                 <label class="switch-2">
                   <input type="checkbox" />
                   <span class="slider round"></span>

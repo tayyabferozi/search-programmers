@@ -607,6 +607,7 @@
   .bg-results-2,
   .bg-results-3 {
     position: absolute;
+    pointer-events: none;
   }
 
   .bg-results-1 {

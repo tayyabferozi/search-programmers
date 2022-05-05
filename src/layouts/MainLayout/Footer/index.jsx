@@ -41,29 +41,15 @@ const Footer = () => {
   } = useContext(GlobalContext);
   return (
     <Section id="footer">
-      {/* <img
-        className="bg-footer-left"
-        src="/assets/vectors/bg-footer-left.svg"
-        alt="bg-left"
-      />
-      <img
-        className="bg-footer-right"
-        src="/assets/vectors/bg-footer-right.svg"
-        alt="bg-right"
-      />
-      <img
-        className="bg-footer-left-dark"
-        src="/assets/vectors/bg-footer-left-dark.svg"
-        alt="bg-left"
-      />
-      <img
-        className="bg-footer-right-dark"
-        src="/assets/vectors/bg-footer-right-dark.svg"
-        alt="bg-right"
-      /> */}
       <GridContainer rowClassName="main-row">
         <div className="col-lg-4 left">
-          <img className="logo-img" src="/assets/vectors/logo.svg" alt="logo" />
+          <Link to="/">
+            <img
+              className="logo-img"
+              src="/assets/vectors/logo.svg"
+              alt="logo"
+            />
+          </Link>
 
           <p className="fs-16 mt-4 text-light-1">
             Lorem Ipsum is simply dummy text of the printing and typesetting
