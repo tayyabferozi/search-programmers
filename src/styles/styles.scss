@@ -588,6 +588,100 @@
   }
 }
 
+#search-results {
+  padding-top: 140px;
+  position: relative;
+  overflow: hidden;
+
+  .bg-results-1,
+  .bg-results-2,
+  .bg-results-3 {
+    position: absolute;
+  }
+
+  .bg-results-1 {
+    top: 0;
+    left: 0;
+  }
+
+  .bg-results-2 {
+    top: 50%;
+    right: 0;
+    left: unset;
+    transform: translateY(-50%);
+  }
+
+  .bg-results-3 {
+    left: 0;
+    bottom: -15rem;
+  }
+
+  .section-title {
+    max-width: unset;
+  }
+
+  .cards-row {
+    --bs-gutter-x: 30px;
+    --bs-gutter-y: 30px;
+  }
+
+  .results-main {
+    position: relative;
+  }
+
+  .filter-items {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 2px 4px 23px 0px #0000001a;
+
+    .item {
+      position: relative;
+      padding: 0 20px;
+      height: 58px;
+      font-size: 22px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &.with-chevron {
+        &::after {
+          position: absolute;
+          right: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+          content: url("../assets/vectors/chevron.svg");
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  .result-card {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 2px 4px 23px 0px #0000001a;
+
+    .card-img {
+      img {
+        width: 100%;
+      }
+    }
+
+    .card-body {
+      padding: 15px 15px 20px;
+    }
+
+    .card-foot {
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid $color13;
+    }
+  }
+}
+
 .dark-mode {
   background-color: $color12;
 
@@ -681,8 +775,30 @@
       border-top-color: rgba(255, 255, 255, 0.1);
     }
   }
-}
 
-#search-results {
-  padding-top: 140px;
+  #search-results {
+    .result-card {
+      background-color: $color10;
+
+      * {
+        color: #fff;
+      }
+    }
+
+    .filter-items {
+      background-color: $color10;
+
+      .item {
+        &.with-chevron {
+          &::after {
+            content: url("../assets/vectors/chevron-white.svg");
+          }
+        }
+
+        * {
+          color: #fff;
+        }
+      }
+    }
+  }
 }
